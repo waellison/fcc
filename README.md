@@ -5,3 +5,6 @@ Assorted bits for freeCodeCamp projects not big enough for their own repositorie
 Prefixes:
 
 - `rwd`: "Responsive Web Design"
+- `dsa`: "JavaScript Data Structures and Algorithms"
+- `fwl`: "Frontend Web Libraries"
+- `dvz`: "Data Visualization"
