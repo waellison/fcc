@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - mdp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id='mdp' class='container-fluid d-flex flex-column'>
+  <div class='row editor-environment flex-grow-1'>
+    <div class='col-6 d-flex flex-column'>
+      <h2>
+        Input
+      </h2>
+      <div class='flex-grow-1'>
+        <textarea class='form-control' id='editor'>
+# Heading 1
+## Heading 2
+**Bold** and _italic_.
+
+* Lists can
+* be unordered
+
+1. Or they
+2. can be
+3. ordered!
+
+[Web link](https://google.com).
+
+![alt text](//place-hold.it/300x150)
+
+> Never believe anything you read on the internet.
+>
+> - Abraham Lincoln
+
+Inline `code` and...
+
+```javascript
+// code blocks too!
+console.log("Hello, world!")
+```
+</textarea>
+      </div>
+    </div>
+    <div class='col-6 d-flex flex-column'>
+      <h2>
+        Preview
+      </h2>
+      <div class='flex-grow-1' id='preview'>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
