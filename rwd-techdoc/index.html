@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Ruby Programming Language</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <div id="container">
+      <nav id="navbar">
+        <header>
+          <h1>The Ruby Programming Language</h1>
+        </header>
+
+        <menu>
+          <li><a class="nav-link" href="#About_Ruby">About Ruby</a></li>
+          <li><a class="nav-link" href="#Conditionals_and_Loops">Conditionals and Loops</a></li>
+          <li><a class="nav-link" href="#Functions_and_Blocks">Functions and Blocks</a></li>
+          <li><a class="nav-link" href="#Classes">Classes</a></li>
+          <li><a class="nav-link" href="#Next_Steps">Next Steps</a></li>
+        </menu>
+      </nav>
+
+      <main id="main-doc">
+        <section class="main-section" id="About_Ruby">
+          <header class="section-header">
+            <h2>About Ruby</h2>
+          </header>
+          <p>
+            Ruby was created by Japanese programmer Yukihiro Matsumoto
+            and first appeared in 1995.  Ruby is dynamically typed and
+            supports multiple paradigms.  Matsumoto cites such langauges
+            as Perl, Smalltalk, Ada, and Lisp as inspirations for Ruby.
+            Matsumoto's stated objective was to be Lisp-like at its
+            core, with object orientation inspired by Smalltalk,
+            higher-order functions, and the practical utility of Perl.
+          </p>
+          <p>
+            As always, the first program to write is the same in all
+            languages:
+          </p>
+<pre><code>puts "Hello, world!"</code></pre>
+          <p>
+            This prints the string <code>Hello, world!</code> to the 
+            standard output.
+          </p>
+          <p>
+            Ruby has been used for:
+          </p>
+          <ul>
+            <li>Scripting and automation, as a replacement for Perl and
+              shell scripts</li>
+            <li>Mobile development through libraries such as
+              RubyMotion</li>
+            <li>Desktop development, e.g. through Cocoa Ruby on the
+              Macintosh</li>
+            <li>Web development, most famously through <em>Ruby on
+              Rails</em></li>
+          </ul>
+          <p>
+            Comments in Ruby begin with the octothorpe (<code>#</code>),
+            a convention common to Python and shell scripting.
+          </p>
+        </section>
+        <section class="main-section" id="Conditionals_and_Loops">
+          <header class="section-header">
+            <h2>Conditionals and Loops</h2>
+          </header>
+          <p>
+            Ruby sports three looping constructs:
+          </p>
+          <ul>
+            <li><code>for</code>
+            <li><code>while</code>
+            <li><code>until</code>
+          </ul>
+          <p>
+            Ruby supports conditionals much like any other language,
+            using these keywords:
+          </p>
+          <ul>
+            <li><code>if</code>
+            <li><code>elsif</code>
+            <li><code>unless</code>
+            <li><code>else</code>
+          </ul>
+        </section>
+        <section class="main-section" id="Functions_and_Blocks">
+          <header class="section-header">
+            <h2>Functions and Blocks</h2>
+          </header>
+          <p>
+            Like all high-level languages, Ruby lets you define your own
+            functions using the <code>def</code> keyword.
+          </p>
+<pre><code>def say_hello_to (person)
+    puts "Hello, #{person}."
+end
+</code></pre>
+          <p>
+            As you might expect, you can then call this function at will
+            in your code.  Parentheses around the arguments to a
+            function are optional, and if a function has no arguments or
+            a single argument, the parentheses are often omitted:
+          </p>
+<pre><code>say_hello_to "William"       # prints "Hello, William."</code></pre>
+        </section>
+        <section class="main-section" id="Classes">
+          <header class="section-header">
+            <h2>Classes</h2>
+          </header>
+          <p>
+            Ruby is a pervasively object-oriented language; everything
+            is an object.  You can create your own classes from which
+            you can instantiate your own objects.  A very basic example
+            of a class is given below:
+          </p>
+<pre><code>class Doge
+    attr_accessor :name
+
+    def initialize(name="Doge")
+        self.name = name
+    end
+
+    def such thing
+        return "Such #{thing}"
+    end
+
+    def very thing
+        return "Very #{thing}"
+    end
+
+    def wow
+        return "Wow"
+    end
+
+    def i_am
+        return self.name
+    end
+end
+</code></pre>
+          <p>
+            Now we can create our very own doge:
+          </p>
+<pre><code>irb(main):016:0> my_doge = Doge.new("Jeff")
+=> #<Doge:0x0000000104e80738 @name="Jeff">
+irb(main):017:0> my_doge.wow
+=> "Wow"
+irb(main):018:0> my_doge.such "Ruby"
+=> "Such Ruby"
+irb(main):019:0> my_doge.very "program"
+=> "Very program"
+irb(main):020:0> my_doge.wow
+=> "Wow"
+irb(main):021:0> puts "I am #{my_doge.name}"
+=> "I am Jeff"
+</code></pre>
+          <p>
+            As you might guess, there's a lot more to Ruby classes than
+            this silly example.
+          </p>
+        </section>
+        <section class="main-section" id="Next_Steps">
+          <header class="section-header">
+            <h2>Next Steps</h2>
+          </header>
+          <p>
+            If you are new to Ruby development, I recommend <a
+            target="_blank" href="https://poignant.guide">why's (poignant) guide to
+            Ruby</a> by <em>why the lucky stiff</em>.  The book will get
+            you up to speed quickly and in an enjoyble way, and best of
+            all, the book is available for free online.
+          </p>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <p>
+          Copyright © 2022 by William Ellison, this document is in the
+          public domain.
+        </p>
+      </footer>
+    </div>
+    
+    <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+  </body>
+</html>
+

@@ -1,0 +1,107 @@
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: antiquewhite;
+    color: #111;
+}
+
+a:link {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rebeccapurple;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: #ddd;
+        background-color: #333;
+    }
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100vw;    
+}
+
+#nav-bar {
+    display: flex;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+#nav-bar-brand img {
+    width: 20rem;
+}
+
+#nav-bar menu {
+    display: inline-block;
+}
+
+#nav-bar menu li {
+    display: inline-block;
+    padding: 0;
+    list-style-type: none;
+    margin: 0 1rem;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 4.5rem auto 4.5rem;
+    grid-template-columns: clamp(0.5rem, 12rem, 24rem) auto clamp(0.5rem, 12rem, 24rem);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-bottom: 2rem;
+}
+
+label {
+    width: 6rem;
+    display: inline-block;
+}
+
+#footer {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    color: #111;
+}
+
+#video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 36rem;
+}
+
+#video-box figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#video-caption {
+    margin-top: 0.5rem;
+}
+

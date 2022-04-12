@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Tahoma", sans-serif;
+}
+
+#main {
+  width: 75%;
+}
+
+#img-div {
+  width: 66vw;
+  margin: 0 auto;
+  display: block;
+}
+
+#image {
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+

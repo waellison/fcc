@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to William's Weird, Random Survey</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <div id="container">
+    <h1 id="title">William's Weird, Random Survey</h1>
+
+    <p id="description">
+      Please answer the following questions in any order you like.
+      <s>We</s> I'm doing a survey, and&hellip;
+    </p>
+    
+    <form id="survey-form" action="#" method="get">
+      <p>First, what are you?</p>
+      <input type="radio" name="gender" id="gender-male"
+      value="m">&nbsp;<label for="gender-male">Dude</label>
+      <input type="radio" name="gender" id="gender-female"
+      value="f">&nbsp;<label for="gender-female">Chick</label>
+      <input type="radio" name="gender" id="gender-other"
+      value="x">&nbsp;<label for="gender-other">Somethin' else</label>
+
+      <p>Cool.  How many anchors do you own?  (Give an answer between 0
+      and 20.)</p>
+      <p>
+        <label id="number-label" for="anchor-count">I own this many anchors:</label>&nbsp;
+        <input type="number" min="0" max="20" placeholder="0" name="anchor-count" id="number">
+      </p>
+      
+      <p>Sweet.  What programming languages do you like?</p>
+      <p>
+        <input type="checkbox" value="py" name="python">&nbsp;<label
+        for="python" checked="checked">Python</label>
+        <input type="checkbox" value="js" name="javascript">&nbsp;<label
+        for="javascript">JavaScript</label>
+        <input type="checkbox" value="pas" name="pascal">&nbsp;<label
+        for="pascal">Pascal</label>
+        <input type="checkbox" value="cpp" name="ceeplusplus">&nbsp;<label
+        for="ceeplusplus">C++</label>
+        <input type="checkbox" value="lisp" name="lisp">&nbsp;<label
+        for="lisp">Lisp</label>
+        <input type="checkbox" value="bf" name="brainfeck">&nbsp;<label
+        for="brainfeck">Brainf*ck</label>
+      </p>
+
+      <p>Nerd!  What were you, a Cartoon Network kid or a Nickelodeon
+      kid?</p>
+      <p>
+        <label for="network">I watched</label>&nbsp;<select name="network" id="dropdown">
+          <option name="cn">Cartoon Network (a cool network for cool people)</option>
+          <option name="nick">Nickelodeon (fine too)</option>
+          <option name="cspan">C-SPAN (I was the weird kid in class)</option>
+          <option name="other">I'm not American, you dunce</option>
+        </select>
+      </p>
+
+      <p>Tell me: who are you?</p>
+      <p><label for="name" id="name-label">My name is</label>&nbsp;<input
+      type="text" id="name" placeholder="Slim Shady" required></p>
+      <p><label for="email" id="email-label">My email address is</label>&nbsp;<input
+      type="email" id="email" placeholder="slimshady@the90s.com" required></p>
+
+      <p>Got any other remarks for me?</p>
+      <textarea name="other-comments" placeholder="No sir, Mr. William, your survey was awesome!"></textarea>
+
+      <p>Apply pressure to the below button and gimme yer dang data.</p>
+      <button type="submit" id="submit">Yes sir, Mr. William!</button>
+
+    </form>
+    </div>
+
+    <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+  </body>
+</html>
+
