@@ -1,0 +1,20 @@
+body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+  height: 100vh;
+  background-color: #655;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#quote-box {
+  padding: 2rem;
+  background-color: #cbb;
+  border-radius: 2rem;
+  box-shadow: 0 0 5rem 0 #643;
+}
+
+

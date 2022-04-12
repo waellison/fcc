@@ -1,0 +1,106 @@
+class QuoteText extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: "Never believe anything you read on the internet.",
+    }
+    this.update = this.update.bind(this);
+  }
+  update(nextState) {
+    this.setState({
+      text: nextState.text
+    });
+  }
+  render() {
+    return (
+      <div id="text">
+        <p>
+          {this.state.text}
+        </p>
+      </div>
+    );
+  }
+}
+
+class QuoteAuthor extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: "Abraham Lincoln"
+    }
+    this.update = this.update.bind(this);
+  }
+  update(nextState) {
+    this.setState({
+      text: nextState.text
+    });
+  }
+  render() {
+    return (
+      <div id="author">
+        <p>
+          &mdash; {this.state.text}
+        </p>
+      </div>
+    );
+  }
+}
+
+class NewQuoteButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+  clickHandler(event) {
+    console.log("requested a new quote");
+  }
+  render() {
+    return (
+      <a href='#' id="new-quote">
+        Get a New Quote
+      </a>
+    )
+  }
+}
+
+class TwitterShareButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+  clickHandler(event) {
+    console.log("user wishes to tweet this quote");
+  }
+  render() {
+    return (
+      <a href='https://www.twitter.com/intent/tweet/ImagineSomethingWholesome' id="tweet-quote">
+        <i className="fa-brands fa-twitter"></i>&nbsp;Share on Twitter
+  </a>
+    );
+  }
+}
+
+const ButtonContainer = () => {
+  return (
+    <div id="buttonContainer">
+      <NewQuoteButton /> &bull; <TwitterShareButton />
+    </div>
+  )
+};
+
+const Quote = () => {
+  return (
+    <div id="quote">
+      <QuoteText />
+      <QuoteAuthor />
+    </div>
+  );
+}
+
+let quoteBox = document.getElementById("quote-box");
+ReactDOM.render((
+  <div>
+    <Quote />
+    <ButtonContainer />
+  </div>
+), quoteBox);
